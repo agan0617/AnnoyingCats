@@ -3,8 +3,12 @@
 <head>
   <meta charset="utf-8">
 
+  <!-- 告訴瀏覽器：所有相對路徑都從 /AnnoyingCats/ 開始 -->
+  <base href="/AnnoyingCats/">
+
   <title>Cocos Creator | Kens cat</title>
 
+  <!-- 顯示與裝置相容設定 -->
   <meta name="viewport"
         content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1,minimal-ui=true"/>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -25,27 +29,25 @@
 
 <body>
   <div id="GameDiv" cc_exact_fit_screen="true">
-      <div id="Cocos3dGameContainer">
-        <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="99"></canvas>
-      </div>
+    <div id="Cocos3dGameContainer">
+      <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="99"></canvas>
+    </div>
   </div>
 
-  <!-- Polyfills bundle. -->
-  <script src="src/polyfills.bundle.js" charset="utf-8"> </script>
+  <!-- Polyfills bundle -->
+  <script src="src/polyfills.bundle.js" charset="utf-8"></script>
 
-  <!-- SystemJS support. -->
-  <script src="src/system.bundle.js" charset="utf-8"> </script>
+  <!-- SystemJS support -->
+  <script src="src/system.bundle.js" charset="utf-8"></script>
 
   <!-- Import map -->
-  <script src="src/import-map.json" type="systemjs-importmap" charset="utf-8"> </script>
+  <script src="src/import-map.json"
+          type="systemjs-importmap"
+          charset="utf-8"></script>
 
-  <!-- 修正 GitHub Pages 子目錄路徑 -->
+  <!-- 載入遊戲入口 -->
   <script>
-    System.config({
-      baseURL: "/AnnoyingCats/"
-    });
-
-    System.import('./index.js').catch(function(err) {
+    System.import('./index.js').catch(function (err) {
       console.error(err);
     });
   </script>
