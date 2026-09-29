@@ -4,6 +4,8 @@
 
 **▶ 線上試玩：<https://agan0617.github.io/AnnoyingCats/>**（手機、電腦瀏覽器都能玩）
 
+<img src="docs/screenshot.png" width="300" alt="screenshot">
+
 ## 玩法
 
 - 棋盤是 **8 欄 × 10 行**，貓咪方塊有 1×1、1×2、1×3、1×4 四種長度。
